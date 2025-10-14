@@ -33,12 +33,12 @@ const ProductsPage = () => {
       ],
       certificates: [
         {
-          name: 'USDA Organic Certified',
+          name: 'MoAF Organic Certified',
           url: '/pdfs/EMPAKTOR AMINO PRODUCT CERT.pdf',
         },
      
       ],
-      sdsLink: '/pdfs/empa-amino-sds.pdf',
+      sdsLink: '/pdfs/Safety data sheet of 'EMPAKTOR AMINO'.pdf',
       image: 'https://images.unsplash.com/photo-1635865165118-917ed9e20936',
     },
     {
@@ -55,15 +55,12 @@ const ProductsPage = () => {
       ],
       certificates: [
         {
-          name: 'USDA Organic Certified',
-          url: '/pdfs/empa-amino-usda.pdf',
+          name: 'MoAF Organic Certified',
+          url: '/pdfs/EMPAKTOR GREEN PRODUCT CERT(1).pdf',
         },
-        {
-          name: 'ISO 9001 Manufacturing',
-          url: '/pdfs/empa-amino-iso9001.pdf',
-        },
+    
       ],
-      sdsLink: '/pdfs/empa-green-sds.pdf',
+      sdsLink: '/pdfs/Safety data sheet of 'EMPAKTOR GREEN'.pdf',
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
     },
     {
@@ -80,15 +77,12 @@ const ProductsPage = () => {
       ],
       certificates: [
         {
-          name: 'USDA Organic Certified',
-          url: '/pdfs/empa-amino-usda.pdf',
+          name: 'MoAF Organic Certified',
+          url: '/pdfs/EMPAKTOR BALANCE PRODUCT CERT.pdf',
         },
-        {
-          name: 'ISO 9001 Manufacturing',
-          url: '/pdfs/empa-amino-iso9001.pdf',
-        },
+    
       ],
-      sdsLink: '/pdfs/empa-balance-sds.pdf',
+      sdsLink: '/pdfs/Safety data sheet of 'EMPAKTOR BALANCE'.pdf',
       image: 'https://images.unsplash.com/photo-1499696014841-5c143bb2f7e4',
     },
   ];
