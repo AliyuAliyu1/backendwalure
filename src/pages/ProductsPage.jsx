@@ -39,7 +39,7 @@ const ProductsPage = () => {
      
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR AMINO'.pdf",
-      image: '/images/WhatsApp Image 2025-10-14 at 10.42.38.jpg',
+      image: '/images/biomino.jpg',
     },
     {
       icon: Sprout,
