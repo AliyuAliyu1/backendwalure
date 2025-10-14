@@ -268,9 +268,17 @@ const ProductsPage = () => {
               <li>✔ Drip Irrigation: Apply diluted 1:500 weekly for continuous nutrition.</li>
               <li>✔ Use morning or late afternoon to reduce evaporation.</li>
             </ul>
-            <Button className="mt-6 bg-green-600 text-white hover:bg-green-700">
-              Download Full Application Guide
-            </Button>
+    <a
+  href="/pdfs/EMPAKTOR FERTILIZERS PROTOCOL & REPORT.pdf"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="mt-6 bg-green-600 text-white hover:bg-green-700">
+    Download Full Application Guide
+  </Button>
+</a>
+
           </div>
         </section>
 
@@ -302,29 +310,113 @@ const ProductsPage = () => {
             </div>
           </div>
         </section>
+{/* Downloads */}
+<section className="py-20 bg-white" id="downloads">
+  <div className="max-w-5xl mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-6 text-green-700">⬇ Downloads</h2>
+    <div className="space-y-4">
+      
+      {/* Product Brochure */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Product Brochure (PDF)</span>
+        </div>
+        <a
+          href="/pdfs/PRESENTATION.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline">Download</Button>
+        </a>
+      </div>
 
-        {/* Downloads */}
-        <section className="py-20 bg-white" id="downloads">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6 text-green-700">⬇ Downloads</h2>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
-                <div className="flex items-center space-x-3">
-                  <Download className="text-green-600" />
-                  <span>Product Brochure (PDF)</span>
-                </div>
-                <Button variant="outline">Download</Button>
-              </div>
-              <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
-                <div className="flex items-center space-x-3">
-                  <Download className="text-green-600" />
-                  <span>Product Comparison Sheet</span>
-                </div>
-                <Button variant="outline">Download</Button>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Product Comparison Sheet */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Product Comparison Sheet</span>
+        </div>
+        <a
+          href="/pdfs/EMPAKTOR VS CONVENTIONAL FERTILIZER.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline">Download</Button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+{/* Downloads */}
+<section className="py-20 bg-white" id="downloads">
+  <div className="max-w-5xl mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-6 text-green-700">⬇ Downloads</h2>
+    <div className="space-y-4">
+
+      {/* Product Brochure */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Product Brochure (PDF)</span>
+        </div>
+        <div className="flex gap-4">
+          {/* View Live Preview */}
+          <Button
+            variant="link"
+            className="text-green-700"
+            onClick={() => handlePreview('/pdfs/product-brochure.pdf', 'Product Brochure')}
+          >
+            View Preview
+          </Button>
+
+          {/* Download Button */}
+          <a
+            href="/pdfs/product-brochure.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline">Download</Button>
+          </a>
+        </div>
+      </div>
+
+      {/* Product Comparison Sheet */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Product Comparison Sheet</span>
+        </div>
+        <div className="flex gap-4">
+          {/* View Live Preview */}
+          <Button
+            variant="link"
+            className="text-green-700"
+            onClick={() => handlePreview('/pdfs/product-comparison.pdf', 'Product Comparison Sheet')}
+          >
+            View Preview
+          </Button>
+
+          {/* Download Button */}
+          <a
+            href="/pdfs/product-comparison.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline">Download</Button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* Innovation Section */}
         <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white">
