@@ -39,7 +39,7 @@ const ProductsPage = () => {
      
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR AMINO'.pdf",
-      image: 'https://images.unsplash.com/photo-1635865165118-917ed9e20936',
+      image: '/images/WhatsApp Image 2025-10-14 at 10.42.38.jpg',
     },
     {
       icon: Sprout,
@@ -61,7 +61,7 @@ const ProductsPage = () => {
     
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR GREEN'.pdf",
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+      image: '/images/original.jpg',
     },
     {
       icon: Droplets,
@@ -83,7 +83,7 @@ const ProductsPage = () => {
     
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR BALANCE'.pdf",
-      image: 'https://images.unsplash.com/photo-1499696014841-5c143bb2f7e4',
+      image: '/images/WhatsApp Image 2025-10-14 at 10.43.41 (1).jpg',
     },
   ];
 
