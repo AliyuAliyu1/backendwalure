@@ -294,30 +294,29 @@ const ProductsPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Innovation & Research</h2>
-              <p className="text-xl mb-8 text-green-50">
-                Our dedicated research and development team, in collaboration with agricultural engineers and university professors, continuously improves the quality and efficiency of our products.
-              </p>
-              <Button
-                onClick={() => handleInquiry('General')}
-                size="lg"
-                className="bg-white text-green-600 hover:bg-green-50"
-              >
-                Talk to an Expert
-              </Button>
-            </motion.div>
-          </motion.div>
-        </section>
+      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <h2 className="text-4xl font-bold mb-6">Innovation & Research</h2>
+      <p className="text-xl mb-8 text-green-50">
+        Our dedicated research and development team, in collaboration with agricultural engineers and university professors, continuously improves the quality and efficiency of our products.
+      </p>
+      <Button
+        onClick={() => handleInquiry('General')}
+        size="lg"
+        className="bg-white text-green-600 hover:bg-green-50"
+      >
+        Talk to an Expert
+      </Button>
+    </motion.div>
+  </div>
+</section>
 
-         <Footer />
 
         {/* PDF Preview Modal */}
         {previewUrl && (
@@ -327,10 +326,11 @@ const ProductsPage = () => {
             onClose={() => setPreviewUrl(null)}
           />
         )}
-      </div> {/* <--- Place before this div closes */}
+
+        <Footer />
+      </div>
     </>
   );
 };
-
 
 export default ProductsPage;
