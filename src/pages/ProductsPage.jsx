@@ -34,12 +34,9 @@ const ProductsPage = () => {
       certificates: [
         {
           name: 'USDA Organic Certified',
-          url: '/pdfs/empa-amino-usda.pdf',
+          url: '/pdfs/EMPAKTOR AMINO PRODUCT CERT.pdf',
         },
-        {
-          name: 'ISO 9001 Manufacturing',
-          url: '/pdfs/empa-amino-iso9001.pdf',
-        },
+     
       ],
       sdsLink: '/pdfs/empa-amino-sds.pdf',
       image: 'https://images.unsplash.com/photo-1635865165118-917ed9e20936',
