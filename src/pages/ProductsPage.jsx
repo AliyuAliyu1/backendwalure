@@ -179,7 +179,70 @@ const ProductsPage = () => {
             </div>
           </div>
         </section>
+           <section className="py-20 bg-white border-t" id="overview">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6 text-green-700">📘 Product Overview</h2>
+            <p className="text-gray-700 leading-relaxed">
+              EMPAKTOR fertilizers are designed for every phase of crop development. From early root formation to harvest-quality
+              improvement, each formula has a unique biological role supported by bacterial enzymes and natural amino acids.
+            </p>
+          </div>
+        </section>
 
+        <section className="py-20 bg-green-50" id="application">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6 text-green-700">🧪 Application</h2>
+            <ul className="space-y-4 text-gray-700">
+              <li>✔ Foliar Spray: 1–2 L/ha during early growth and flowering.</li>
+              <li>✔ Drip Irrigation: Apply diluted 1:500 weekly for continuous nutrition.</li>
+              <li>✔ Use morning or late afternoon to reduce evaporation.</li>
+            </ul>
+            <Button className="mt-6 bg-green-600 text-white hover:bg-green-700">
+              Download Full Application Guide
+            </Button>
+          </div>
+        </section>
+
+
+        <section className="py-20 bg-green-50" id="reports">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6 text-green-700">📊 Reports</h2>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-lg">Tomato Field Trial – Spain</h4>
+                <p className="text-gray-700">EMPAKTOR GREEN showed +18% yield increase in greenhouse tomato trials over 3 months.</p>
+                <Button variant="link" className="pl-0 text-green-700">Read Full Report</Button>
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg">Soil Health Study – Kenya</h4>
+                <p className="text-gray-700">EMPAKTOR BALANCE restored soil microbial activity by 26% after 2 months of application.</p>
+                <Button variant="link" className="pl-0 text-green-700">Read Full Report</Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white" id="downloads">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6 text-green-700">⬇ Downloads</h2>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+                <div className="flex items-center space-x-3">
+                  <Download className="text-green-600" />
+                  <span>Product Brochure (PDF)</span>
+                </div>
+                <Button variant="outline">Download</Button>
+              </div>
+              <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+                <div className="flex items-center space-x-3">
+                  <Download className="text-green-600" />
+                  <span>Product Comparison Sheet</span>
+                </div>
+                <Button variant="outline">Download</Button>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
