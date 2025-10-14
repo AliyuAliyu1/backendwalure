@@ -27,6 +27,11 @@ const AboutPage = () => {
       title: 'Innovation & Expertise',
       description: 'Cutting-edge research ensures the effectiveness and quality of our solutions.',
     },
+    {
+      icon: Globe,
+      title: 'Global Vision',
+      description: 'With roots in Turkey, we are committed to making a positive impact worldwide.',
+    },
   ];
 
   const milestones = [
@@ -51,6 +56,7 @@ const AboutPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
         <Navbar />
 
+        {/* Hero & Mission */}
         <section className="pt-32 pb-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -81,6 +87,16 @@ const AboutPage = () => {
                 <p className="text-lg text-gray-600">
                   Our mission is to promote sustainable farming practices that enhance agricultural productivity while protecting the planet for future generations.
                 </p>
+
+                <div className="mt-8">
+                  <h2 className="text-2xl font-semibold mb-4">Who We Are</h2>
+                  <p className="text-lg text-gray-600 mb-4">
+                    <strong>Green Hub Gıda Tarım Dış Ticaret Ltd. Şti.</strong> is a manufacturer of plant-based organic liquid fertilizers under the brand name <strong>EMPAKTOR</strong>, based in Ankara, Turkey.
+                  </p>
+                  <p className="text-lg text-gray-600">
+                    With a strong distribution network in Turkey, we are now expanding across African markets, offering innovative products and local support to farmers globally.
+                  </p>
+                </div>
               </motion.div>
 
               <motion.div
@@ -91,12 +107,17 @@ const AboutPage = () => {
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl blur-3xl opacity-20"></div>
-                <img class="relative rounded-3xl shadow-2xl w-full" alt="Green Hub team collaborating with farmers" src="https://images.unsplash.com/photo-1681834913206-cea9d3ec04d6" />
+                <img
+                  className="relative rounded-3xl shadow-2xl w-full"
+                  alt="Green Hub team collaborating with farmers"
+                  src="https://images.unsplash.com/photo-1681834913206-cea9d3ec04d6"
+                />
               </motion.div>
             </div>
           </div>
         </section>
 
+        {/* Why Choose Green Hub */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -112,7 +133,7 @@ const AboutPage = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {values.map((value, index) => (
                 <motion.div
                   key={index}
@@ -133,6 +154,61 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Our Products */}
+        <section className="py-20 bg-emerald-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4">Our Products</h2>
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                EMPAKTOR’s product line offers specialized organic fertilizers tailored to modern agricultural needs.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "EMPAKTOR AMINO",
+                  description:
+                    "Enhances nutrient absorption, promotes root development, and boosts overall plant health.",
+                },
+                {
+                  name: "EMPAKTOR GREEN",
+                  description:
+                    "Improves chlorophyll production, ensuring vibrant growth and higher yields.",
+                },
+                {
+                  name: "EMPAKTOR BALANCE",
+                  description:
+                    "Restores soil fertility, balances nutrient levels, and supports sustainability.",
+                },
+              ].map((product, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-2xl shadow-md border border-emerald-100"
+                >
+                  <h3 className="text-xl font-bold mb-2 text-emerald-700">{product.name}</h3>
+                  <p className="text-gray-600">{product.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center max-w-3xl mx-auto text-gray-700 text-lg">
+              Each product is enriched with <strong>bacterial enzymes</strong> and <strong>amino acids</strong> to support healthy, eco-conscious farming.
+            </div>
+          </div>
+        </section>
+
+        {/* Global Presence */}
         <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -144,7 +220,7 @@ const AboutPage = () => {
             >
               <h2 className="text-4xl font-bold mb-4">Our Global Presence</h2>
               <p className="text-xl text-green-50 max-w-2xl mx-auto">
-                From our roots in Turkey to our expansion across Africa.
+                From our roots in Turkey to our growing presence in Africa—including Nigeria, Ghana, Guinea Conakry, The Gambia, and Ethiopia—we're committed to delivering impactful, localized solutions.
               </p>
             </motion.div>
 
@@ -166,6 +242,37 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Partner Farms */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold mb-4">Partner Farms in Ghana</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Through our regional representatives in Africa, Green Hub has partnered with a portfolio of private farms in Ghana. These <strong>Partner Farms</strong> are officially registered to receive value chain support services.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center max-w-3xl mx-auto text-gray-600 text-lg"
+            >
+              <p>
+                This includes the supply of <strong>EMPAKTOR fertilizers</strong>, seeds, and post-harvest ready market access via our affiliated companies: <strong>G-Hub Global</strong> and <strong>Redi Commodities</strong>.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Capacity & Quality */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -178,7 +285,7 @@ const AboutPage = () => {
               >
                 <Globe className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <div className="text-4xl font-bold gradient-text mb-2">10M L</div>
-                <p className="text-gray-600 font-semibold">Annual Production Capacity</p>
+                <p className="text-gray-600 font-semibold">Annual Production Capacity with rigorous quality control for every batch</p>
               </motion.div>
 
               <motion.div
