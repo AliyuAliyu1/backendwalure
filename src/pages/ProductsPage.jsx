@@ -9,17 +9,17 @@ import React, { useState } from 'react';
 import PDFPreviewModal from '@/components/PDFPreviewModal'; // adjust path if needed
 
 
+
+
+
+const ProductsPage = () => {
+  const { toast } = useToast();
 const [previewUrl, setPreviewUrl] = useState(null);
 const [previewTitle, setPreviewTitle] = useState('');
 const handlePreview = (url, title) => {
   setPreviewUrl(url);
   setPreviewTitle(title);
 };
-
-
-const ProductsPage = () => {
-  const { toast } = useToast();
-
   const products = [
     {
       icon: Leaf,
