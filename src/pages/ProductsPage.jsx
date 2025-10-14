@@ -318,18 +318,20 @@ const ProductsPage = () => {
           </div>
         </section>
 
-        <Footer />
+         <Footer />
+
+        {/* PDF Preview Modal */}
         {previewUrl && (
-  <PDFPreviewModal
-    url={previewUrl}
-    title={previewTitle}
-    onClose={() => setPreviewUrl(null)}
-  />
-)}
-            
-      </div>
+          <PDFPreviewModal
+            url={previewUrl}
+            title={previewTitle}
+            onClose={() => setPreviewUrl(null)}
+          />
+        )}
+      </div> {/* <--- Place before this div closes */}
     </>
   );
 };
+
 
 export default ProductsPage;
