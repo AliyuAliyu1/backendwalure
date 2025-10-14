@@ -6,6 +6,17 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import React, { useState } from 'react';
+import PDFPreviewModal from '@/components/PDFPreviewModal'; // adjust path if needed
+
+
+const [previewUrl, setPreviewUrl] = useState(null);
+const [previewTitle, setPreviewTitle] = useState('');
+const handlePreview = (url, title) => {
+  setPreviewUrl(url);
+  setPreviewTitle(title);
+};
+
 
 const ProductsPage = () => {
   const { toast } = useToast();
@@ -17,7 +28,16 @@ const ProductsPage = () => {
       category: 'Growth & Health',
       description: 'Enhances nutrient absorption, promotes root development, and boosts overall plant health.',
       features: ['Rich in Amino Acids', 'Improves Root System', 'Boosts Plant Vigor', 'Stress Resistance'],
-      certificates: ['USDA Organic Certified', 'ISO 9001 Manufacturing'],
+      certificates: [
+  {
+    name: 'USDA Organic Certified',
+    url: '/pdfs/empa-amino-usda.pdf',
+  },
+  {
+    name: 'ISO 9001 Manufacturing',
+    url: '/pdfs/empa-amino-iso9001.pdf',
+  },
+],
       sdsLink: '#', // Replace with actual SDS URL
       image: 'https://images.unsplash.com/photo-1635865165118-917ed9e20936',
     },
@@ -27,7 +47,16 @@ const ProductsPage = () => {
       category: 'Yield & Quality',
       description: 'Designed to improve chlorophyll production, ensuring vibrant, healthy growth and higher yields.',
       features: ['High Chlorophyll Production', 'Vibrant, Healthy Growth', 'Increases Yields', 'Improves Quality'],
-      certificates: ['EU Organic Certification', 'ISO 14001 Environmental Management'],
+      certificates: [
+  {
+    name: 'USDA Organic Certified',
+    url: '/pdfs/empa-amino-usda.pdf',
+  },
+  {
+    name: 'ISO 9001 Manufacturing',
+    url: '/pdfs/empa-amino-iso9001.pdf',
+  },
+],
       sdsLink: '#', // Replace with actual SDS URL
       image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
     },
@@ -37,8 +66,17 @@ const ProductsPage = () => {
       category: 'Soil Health',
       description: 'Restores soil fertility, balances nutrient levels, and supports long-term sustainability.',
       features: ['Restores Soil Fertility', 'Balances Nutrients', 'Long-term Sustainability', 'Eco-Friendly'],
-      certificates: ['OMRI Listed', 'ISO 22000 Food Safety'],
-      sdsLink: '#', // Replace with actual SDS URL
+      certificates: [
+  {
+    name: 'USDA Organic Certified',
+    url: '/pdfs/empa-amino-usda.pdf',
+  },
+  {
+    name: 'ISO 9001 Manufacturing',
+    url: '/pdfs/empa-amino-iso9001.pdf',
+  },
+],
+      sdsLink: '/pdfs/empa-amino-sds.pdf', // Replace with actual SDS URL
       image: 'https://images.unsplash.com/photo-1499696014841-5c143bb2f7e4',
     },
   ];
@@ -126,25 +164,11 @@ const ProductsPage = () => {
                       Request Quote
                     </Button>
 
-                   {/* Certificates Section */}
+{/* Certificates Section */}
 <div className="mb-6">
   <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
     <FileText className="w-5 h-5 mr-2" /> Certificates
   </h4>
-
-  {/* Preview the first certificate PDF */}
-  {product.certificates.length > 0 && (
-    <div className="mb-4 border border-green-200 rounded overflow-hidden shadow-sm">
-      <iframe
-        src={product.certificates[0].url}
-        title={`${product.name} Certificate Preview`}
-        className="w-full h-64"
-        frameBorder="0"
-      />
-    </div>
-  )}
-
-  {/* List certificates with download buttons */}
   <ul className="space-y-2">
     {product.certificates.map((cert, i) => (
       <li
@@ -152,15 +176,23 @@ const ProductsPage = () => {
         className="text-sm text-gray-700 flex items-center justify-between"
       >
         <span>{cert.name}</span>
-        <a
-          href={cert.url}
-          className="text-green-600 underline hover:text-green-800 flex items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <Download className="w-4 h-4 mr-1" /> Download PDF
-        </a>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => handlePreview(cert.url, cert.name)}
+            className="text-green-600 underline hover:text-green-800 text-sm"
+          >
+            View Preview
+          </button>
+          <a
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="text-green-600 underline hover:text-green-800 text-sm"
+          >
+            Download PDF
+          </a>
+        </div>
       </li>
     ))}
   </ul>
@@ -171,37 +203,33 @@ const ProductsPage = () => {
   <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
     <Download className="w-5 h-5 mr-2" /> Safety Data Sheet
   </h4>
-
-  {/* Preview SDS PDF */}
-  {product.sdsLink && (
-    <div className="mb-4 border border-green-200 rounded overflow-hidden shadow-sm">
-      <iframe
-        src={product.sdsLink}
-        title={`${product.name} SDS Preview`}
-        className="w-full h-64"
-        frameBorder="0"
-      />
-    </div>
-  )}
-
   <div className="flex items-center justify-between border border-green-200 rounded p-3">
-    <span className="text-gray-700">Download SDS for {product.name}</span>
-    <a
-      href={product.sdsLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      download
-    >
-      <Button
-        variant="outline"
-        size="sm"
-        className="text-green-600 border-green-500 hover:bg-green-50"
+    <span className="text-gray-700">For {product.name}</span>
+    <div className="flex items-center gap-3">
+      <button
+        onClick={() => handlePreview(product.sdsLink, `${product.name} SDS`)}
+        className="text-green-600 underline hover:text-green-800 text-sm"
       >
-        Download
-      </Button>
-    </a>
+        View Preview
+      </button>
+      <a
+        href={product.sdsLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        download
+      >
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-green-600 border-green-500 hover:bg-green-50"
+        >
+          Download
+        </Button>
+      </a>
+    </div>
   </div>
 </div>
+
 
            <section className="py-20 bg-white border-t" id="overview">
           <div className="max-w-5xl mx-auto px-4">
@@ -291,6 +319,14 @@ const ProductsPage = () => {
         </section>
 
         <Footer />
+        {previewUrl && (
+  <PDFPreviewModal
+    url={previewUrl}
+    title={previewTitle}
+    onClose={() => setPreviewUrl(null)}
+  />
+)}
+            
       </div>
     </>
   );
