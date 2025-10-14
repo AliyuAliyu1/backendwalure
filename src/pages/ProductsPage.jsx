@@ -83,7 +83,7 @@ const ProductsPage = () => {
     
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR BALANCE'.pdf",
-      image: '/images/biomino1.jpg',
+      image: '/images/Balance.jpg',
     },
   ];
 
