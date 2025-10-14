@@ -61,7 +61,7 @@ const ProductsPage = () => {
     
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR GREEN'.pdf",
-      image: '/images/Original1.jpg',
+      image: '/images/biogreeno.jpg',
     },
     {
       icon: Droplets,
@@ -83,7 +83,7 @@ const ProductsPage = () => {
     
       ],
       sdsLink: "/pdfs/Safety data sheet of 'EMPAKTOR BALANCE'.pdf",
-      image: '/images/Balance.jpg',
+      image: '/images/biomino1.jpg',
     },
   ];
 
