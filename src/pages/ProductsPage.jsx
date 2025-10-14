@@ -126,59 +126,83 @@ const ProductsPage = () => {
                       Request Quote
                     </Button>
 
-                    {/* Certificates Section */}
-                    <div className="mb-6">
-                      <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
-                        <FileText className="w-5 h-5 mr-2" /> Certificates
-                      </h4>
-                      <ul className="space-y-1">
-                        {product.certificates.map((cert, i) => (
-                          <li
-                            key={i}
-                            className="text-sm text-gray-700 flex items-center justify-between"
-                          >
-                            <span>{cert}</span>
-                            <a
-                              href="#"
-                              className="text-green-600 underline hover:text-green-800"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Download PDF
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                   {/* Certificates Section */}
+<div className="mb-6">
+  <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
+    <FileText className="w-5 h-5 mr-2" /> Certificates
+  </h4>
 
-                    {/* Safety Data Sheet Section */}
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
-                        <Download className="w-5 h-5 mr-2" /> Safety Data Sheet
-                      </h4>
-                      <div className="flex items-center justify-between border border-green-200 rounded p-3">
-                        <span className="text-gray-700">Download SDS for {product.name}</span>
-                        <a
-                          href={product.sdsLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="text-green-600 border-green-500 hover:bg-green-50"
-                          >
-                            Download
-                          </Button>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+  {/* Preview the first certificate PDF */}
+  {product.certificates.length > 0 && (
+    <div className="mb-4 border border-green-200 rounded overflow-hidden shadow-sm">
+      <iframe
+        src={product.certificates[0].url}
+        title={`${product.name} Certificate Preview`}
+        className="w-full h-64"
+        frameBorder="0"
+      />
+    </div>
+  )}
+
+  {/* List certificates with download buttons */}
+  <ul className="space-y-2">
+    {product.certificates.map((cert, i) => (
+      <li
+        key={i}
+        className="text-sm text-gray-700 flex items-center justify-between"
+      >
+        <span>{cert.name}</span>
+        <a
+          href={cert.url}
+          className="text-green-600 underline hover:text-green-800 flex items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <Download className="w-4 h-4 mr-1" /> Download PDF
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+{/* Safety Data Sheet Section */}
+<div>
+  <h4 className="text-xl font-semibold mb-2 text-green-700 flex items-center">
+    <Download className="w-5 h-5 mr-2" /> Safety Data Sheet
+  </h4>
+
+  {/* Preview SDS PDF */}
+  {product.sdsLink && (
+    <div className="mb-4 border border-green-200 rounded overflow-hidden shadow-sm">
+      <iframe
+        src={product.sdsLink}
+        title={`${product.name} SDS Preview`}
+        className="w-full h-64"
+        frameBorder="0"
+      />
+    </div>
+  )}
+
+  <div className="flex items-center justify-between border border-green-200 rounded p-3">
+    <span className="text-gray-700">Download SDS for {product.name}</span>
+    <a
+      href={product.sdsLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      download
+    >
+      <Button
+        variant="outline"
+        size="sm"
+        className="text-green-600 border-green-500 hover:bg-green-50"
+      >
+        Download
+      </Button>
+    </a>
+  </div>
+</div>
+
            <section className="py-20 bg-white border-t" id="overview">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6 text-green-700">📘 Product Overview</h2>
