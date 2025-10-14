@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Leaf, Droplets, Sprout, FileText, Download } from 'lucide-react';
@@ -315,7 +314,7 @@ const ProductsPage = () => {
                 Talk to an Expert
               </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </section>
 
          <Footer />
