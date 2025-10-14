@@ -228,7 +228,7 @@ const handlePreview = (url, title) => {
     </div>
   </div>
 </div>
-
+</motion.div>
 
            <section className="py-20 bg-white border-t" id="overview">
           <div className="max-w-5xl mx-auto px-4">
