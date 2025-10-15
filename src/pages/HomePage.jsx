@@ -61,7 +61,7 @@ const HomePage = () => {
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                   <span className="gradient-text">EMPAKTOR</span> Organic Liquid Fertilizers
                 </h1>
-                <p className="text-xl text-gray-600 mb-8">
+                <p className="text-xl text-white mb-8">
                   Sustainable agricultural solutions from Green Hub to empower farmers, enhance productivity, and nurture the environment.
                 </p>
                 <div className="flex flex-wrap gap-4">
