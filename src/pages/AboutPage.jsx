@@ -117,42 +117,105 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Why Choose Green Hub */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4">Why Choose Green Hub?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                The principles that guide everything we do
-              </p>
-            </motion.div>
+{/* Our Production Facility */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl font-bold mb-4">Our Production Facility</h2>
+      <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+        Explore our state-of-the-art facility in Ankara, Turkey, where innovation meets sustainability to produce EMPAKTOR’s premium organic fertilizers.
+      </p>
+    </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl card-hover border border-green-100 text-center"
-                >
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Image 1 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="rounded-2xl overflow-hidden shadow-lg"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1581092334653-fd1db5947b73"
+          alt="Production Equipment"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Image 2 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="rounded-2xl overflow-hidden shadow-lg"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1556909212-d624d1b32a0e"
+          alt="Fertilizer Bottling Line"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Video 1 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="rounded-2xl overflow-hidden shadow-lg"
+      >
+        <video
+          controls
+          className="w-full h-full object-cover rounded-xl"
+          poster="/assets/videos/thumbnail-production.jpg"
+        >
+          <source src="/assets/videos/production-line.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </motion.div>
+
+      {/* Image 3 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="rounded-2xl overflow-hidden shadow-lg"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1615461066841-fbe1c103dd4b"
+          alt="Lab Testing"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Video 2 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="rounded-2xl overflow-hidden shadow-lg"
+      >
+        <video
+          controls
+          className="w-full h-full object-cover rounded-xl"
+        >
+          <source src="/assets/videos/lab-testing.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
         {/* Our Products */}
         <section className="py-20 bg-emerald-50">
