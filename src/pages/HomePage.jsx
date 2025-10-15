@@ -250,7 +250,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/WhatsApp Image 2025-10-05 at 20.05.45_bacbb17c.jpeg"
+                  src="/images/maiz.jpeg"
                   alt="Production"
                   className="w-full h-full object-cover"
                 />
