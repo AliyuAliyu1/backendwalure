@@ -171,6 +171,120 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+    <section className="py-20 bg-emerald-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4">Our Visual Impact</h2>
+              <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                See how Green Hub is transforming agriculture through partner farms, facilities, and outreach.
+              </p>
+            </motion.div>
+
+            {/* MEDIA GRID */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Image 1 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+                  alt="Farmers training"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Image 2 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1615486367211-497c63b339e9"
+                  alt="Lush field"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Video 1 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <video
+                  controls
+                  className="w-full h-full object-cover rounded-xl"
+                  poster="/assets/videos/thumbnail.jpg"
+                >
+                  <source src="/assets/videos/farm-training.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </motion.div>
+
+              {/* Image 3 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1589927986089-35812388d1d8"
+                  alt="Production"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Image 4 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1592859720411-b2d21f3f3db0"
+                  alt="Partner farm"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Video 2 */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="rounded-2xl overflow-hidden shadow-lg"
+              >
+                <video
+                  controls
+                  className="w-full h-full object-cover rounded-xl"
+                >
+                  <source src="/assets/videos/farm-operations.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
