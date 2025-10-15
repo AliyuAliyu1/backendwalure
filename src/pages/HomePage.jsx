@@ -202,7 +202,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+                  src="/images/aaaaas.jpeg"
                   alt="Farmers training"
                   className="w-full h-full object-cover"
                 />
@@ -217,7 +217,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1615486367211-497c63b339e9"
+                  src="/images/WhatsApp Image 2025-10-05 at 20.02.32_dcbc92a9.jpeg"
                   alt="Lush field"
                   className="w-full h-full object-cover"
                 />
@@ -236,7 +236,7 @@ const HomePage = () => {
                   className="w-full h-full object-cover rounded-xl"
                   poster="/assets/videos/thumbnail.jpg"
                 >
-                  <source src="/assets/videos/farm-training.mp4" type="video/mp4" />
+                  <source src="/videos/WhatsApp Video 2025-10-05 at 20.04.24_287eec09.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </motion.div>
@@ -250,7 +250,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1589927986089-35812388d1d8"
+                  src="/images/WhatsApp Image 2025-10-05 at 20.05.45_bacbb17c.jpeg"
                   alt="Production"
                   className="w-full h-full object-cover"
                 />
@@ -265,7 +265,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1592859720411-b2d21f3f3db0"
+                  src="/images/WhatsApp Image 2025-10-05 at 20.05.45_86247bc5.jpeg"
                   alt="Partner farm"
                   className="w-full h-full object-cover"
                 />
@@ -283,7 +283,7 @@ const HomePage = () => {
                   controls
                   className="w-full h-full object-cover rounded-xl"
                 >
-                  <source src="/assets/videos/farm-operations.mp4" type="video/mp4" />
+                  <source src="/videos/WhatsApp Video 2025-10-05 at 20.05.27_19d34d07.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </motion.div>
