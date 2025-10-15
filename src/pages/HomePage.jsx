@@ -44,8 +44,13 @@ const HomePage = () => {
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
         <Navbar />
 
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 hero-gradient opacity-10"></div>
+        <section
+  className="relative pt-32 pb-20 overflow-hidden bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: `url('/images/WhatsApp Image 2025-10-05 at 20.04.19_a7e82810.jpg')`,
+  }}
+>
+          <div className="absolute inset-0 bg-black/30"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
