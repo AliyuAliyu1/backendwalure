@@ -86,7 +86,7 @@ const HomePage = () => {
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl blur-3xl opacity-20"></div>
-                <img class="relative rounded-3xl shadow-2xl w-full" alt="Lush green field representing healthy agriculture" src="https://images.unsplash.com/photo-1692308065234-4030cafc0cbf" />
+                <img class="relative rounded-3xl shadow-2xl w-full" alt="Lush green field representing healthy agriculture" src="/images/WhatsApp Image 2025-10-05 at 20.01.28_45c10b53.jpg" />
               </motion.div>
             </div>
           </div>
