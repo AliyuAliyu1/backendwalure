@@ -110,7 +110,7 @@ const AboutPage = () => {
                 <img
                   className="relative rounded-3xl shadow-2xl w-full"
                   alt="Green Hub team collaborating with farmers"
-                  src="/images/aaaaas.png"
+                  src="/images/WhatsApp Image 2025-10-05 at 20.01.28_45c10b53.jpg"
                 />
               </motion.div>
             </div>
@@ -143,7 +143,7 @@ const AboutPage = () => {
         className="rounded-2xl overflow-hidden shadow-lg"
       >
         <img
-          src="https://images.unsplash.com/photo-1581092334653-fd1db5947b73"
+          src="/images/WhatsApp Image 2024-11-26 at 20.20.17.jpg"
           alt="Production Equipment"
           className="w-full h-full object-cover"
         />
@@ -158,7 +158,7 @@ const AboutPage = () => {
         className="rounded-2xl overflow-hidden shadow-lg"
       >
         <img
-          src="https://images.unsplash.com/photo-1556909212-d624d1b32a0e"
+          src="/images/aaaaas.png"
           alt="Fertilizer Bottling Line"
           className="w-full h-full object-cover"
         />
@@ -177,7 +177,7 @@ const AboutPage = () => {
           className="w-full h-full object-cover rounded-xl"
           poster="/assets/videos/thumbnail-production.jpg"
         >
-          <source src="/assets/videos/production-line.mp4" type="video/mp4" />
+          <source src="/videos/WhatsApp Video 2025-10-05 at 20.04.19_271bdf52.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
@@ -191,7 +191,7 @@ const AboutPage = () => {
         className="rounded-2xl overflow-hidden shadow-lg"
       >
         <img
-          src="https://images.unsplash.com/photo-1615461066841-fbe1c103dd4b"
+          src="/images/factory.png"
           alt="Lab Testing"
           className="w-full h-full object-cover"
         />
@@ -209,7 +209,7 @@ const AboutPage = () => {
           controls
           className="w-full h-full object-cover rounded-xl"
         >
-          <source src="/assets/videos/lab-testing.mp4" type="video/mp4" />
+          <source src="/videos/WhatsApp Video 2025-10-05 at 20.05.15_1cb60796.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
