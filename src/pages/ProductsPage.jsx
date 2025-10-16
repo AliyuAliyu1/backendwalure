@@ -344,7 +344,60 @@ const ProductsPage = () => {
           </a>
         </div>
       </div>
+    {/* Nutrition */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Nutritients Guide (PDF)</span>
+        </div>
+        <div className="flex gap-4">
+          {/* View Live Preview */}
+          <Button
+            variant="link"
+            className="text-green-700"
+            onClick={() => handlePreview('/pdfs/NUTRIENTS GUIDE_EMPAKTOR PLANT BASED FERTILIZER.pdf', 'Nutritients Guide')}
+          >
+            View Preview
+          </Button>
 
+          {/* Download Button */}
+          <a
+            href="/pdfs/NUTRIENTS GUIDE_EMPAKTOR PLANT BASED FERTILIZER.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline">Download</Button>
+          </a>
+        </div>
+      </div>
+     {/* Quick Reference */}
+      <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
+        <div className="flex items-center space-x-3">
+          <Download className="text-green-600" />
+          <span>Quick Reference (PDF)</span>
+        </div>
+        <div className="flex gap-4">
+          {/* View Live Preview */}
+          <Button
+            variant="link"
+            className="text-green-700"
+            onClick={() => handlePreview('/pdfs/EMPAKTOR QUICK REFERENCE - AMINO + BALANCE + GREEN.pdf', 'Quick Reference')}
+          >
+            View Preview
+          </Button>
+
+          {/* Download Button */}
+          <a
+            href="/pdfs/EMPAKTOR QUICK REFERENCE - AMINO + BALANCE + GREEN.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline">Download</Button>
+          </a>
+        </div>
+      </div>
       {/* Product Comparison Sheet */}
       <div className="flex items-center justify-between border p-4 rounded-md shadow-sm">
         <div className="flex items-center space-x-3">
