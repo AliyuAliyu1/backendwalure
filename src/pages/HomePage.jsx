@@ -139,7 +139,7 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <img class="rounded-3xl shadow-2xl w-full" alt="Modern fertilizer production facility" src="/images/WhatsApp Image 2025-10-05 at 20.02.32_dcbc92a9.jpeg" />
+                <img class="rounded-3xl shadow-2xl w-full" alt="Modern fertilizer production facility" src="/images/resized12.jpeg" />
               </motion.div>
 
               <motion.div
