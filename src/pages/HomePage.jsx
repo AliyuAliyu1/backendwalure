@@ -217,7 +217,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/WhatsApp Image 2025-10-05 at 20.02.32_dcbc92a9.jpg"
+                  src="/images/pineapple.jpg"
                   alt="Lush field"
                   className="w-full h-full object-cover"
                 />
@@ -250,7 +250,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/maiz.jpg"
+                  src="/images/soyabean.jpg"
                   alt="Production"
                   className="w-full h-full object-cover"
                 />
