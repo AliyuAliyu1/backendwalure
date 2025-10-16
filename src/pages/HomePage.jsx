@@ -290,6 +290,80 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+<section className="py-20 bg-emerald-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Heading */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl font-bold mb-4">Our Products</h2>
+      <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+        EMPAKTOR’s product line offers specialized organic fertilizers tailored to modern agricultural needs.
+      </p>
+    </motion.div>
+
+    {/* Product Grid */}
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          name: "EMPAKTOR AMINO",
+          description: "Enhances nutrient absorption, promotes root development, and boosts overall plant health.",
+          image: "/images/IMG_2907.jpg",
+        },
+        {
+          name: "EMPAKTOR GREEN",
+          description: "Improves chlorophyll production, ensuring vibrant growth and higher yields.",
+          image: "/images/IMG_2917.jpg",
+        },
+        {
+          name: "EMPAKTOR BALANCE",
+          description: "Restores soil fertility, balances nutrient levels, and supports sustainability.",
+          image: "/images/IMG_2921.jpg",
+        },
+      ].map((product, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="bg-white rounded-2xl shadow-md border border-emerald-100 overflow-hidden"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2 text-emerald-700">{product.name}</h3>
+            <p className="text-gray-600">{product.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Supporting Text */}
+    <div className="mt-8 text-center max-w-3xl mx-auto text-gray-700 text-lg">
+      Each product is enriched with <strong>bacterial enzymes</strong> and <strong>amino acids</strong> to support healthy, eco-conscious farming.
+    </div>
+
+    {/* 🔽 One CTA Button Below All Products */}
+    <div className="mt-12 text-center">
+      <a
+        href="/products"
+        className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold py-3 px-6 rounded-xl transition duration-300"
+      >
+        View All Products
+      </a>
+    </div>
+
+  </div>
+</section>
 
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
