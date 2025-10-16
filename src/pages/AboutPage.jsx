@@ -110,7 +110,7 @@ const AboutPage = () => {
                 <img
                   className="relative rounded-3xl shadow-2xl w-full"
                   alt="Green Hub team collaborating with farmers"
-                  src="/images/factory.png"
+                  src="/images/aaaaas.png"
                 />
               </motion.div>
             </div>
