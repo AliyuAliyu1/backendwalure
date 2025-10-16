@@ -217,7 +217,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/pineapple.jpg"
+                  src="/images/fruitsqq.jpg"
                   alt="Lush field"
                   className="w-full h-full object-cover"
                 />
