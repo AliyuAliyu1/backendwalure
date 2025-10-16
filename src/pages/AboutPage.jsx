@@ -143,7 +143,7 @@ const AboutPage = () => {
         className="rounded-2xl overflow-hidden shadow-lg"
       >
         <img
-          src="/images/WhatsApp Image 2024-11-26 at 20.20.17.jpg"
+          src="/images/aaaaas.png"
           alt="Production Equipment"
           className="w-full h-full object-cover"
         />
@@ -158,7 +158,7 @@ const AboutPage = () => {
         className="rounded-2xl overflow-hidden shadow-lg"
       >
         <img
-          src="/images/aaaaas.png"
+          src="/images/WhatsApp Image 2024-11-26 at 20.20.17.jpg"
           alt="Fertilizer Bottling Line"
           className="w-full h-full object-cover"
         />
