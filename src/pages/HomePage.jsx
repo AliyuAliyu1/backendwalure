@@ -202,7 +202,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/aaaaas.jpeg"
+                  src="/images/maiz12.jpeg"
                   alt="Farmers training"
                   className="w-full h-full object-cover"
                 />
