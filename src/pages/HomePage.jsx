@@ -265,7 +265,7 @@ const HomePage = () => {
                 className="rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
-                  src="/images/WhatsApp Image 2025-10-05 at 20.05.45_86247bc5.jpeg"
+                  src="/images/WhatsApp Image 2025-10-05 at 20.05.45_86247bc5.jpg"
                   alt="Partner farm"
                   className="w-full h-full object-cover"
                 />
